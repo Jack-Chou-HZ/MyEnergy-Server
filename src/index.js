@@ -8,18 +8,29 @@
 //   This is the entry of the nodejs-sqlite playground
 
 const sqlite3 = require('sqlite3').verbose()
-const db = new sqlite3.Database(':memory', (err) => {
-  if (err) {
-    return console.error(err.message)
+const db = new sqlite3.Database('./src/assets/myenergy.db',
+  (err) => {
+    if (err) {
+      return console.error(err.message)
+    }
+    console.log('Connected to the energy database.')
   }
+)
 
-  return console.log('database connected!')
+db.serialize(() => {
+  db.each('SELECT id, quote, author FROM quotes', (err, row) => {
+    if (err) {
+      console.error(err.message)
+    }
+
+    console.log(row.id + '\t' + row)
+  })
 })
 
 db.close((err) => {
   if (err) {
-    return console.error(err.message)
+    console.error(err.message)
   }
 
-  return console.log('database connected!')
+  console.log('Close the database connection.')
 })
