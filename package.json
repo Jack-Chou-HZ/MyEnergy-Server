@@ -12,6 +12,10 @@
   },
   "scripts": {
     "lint": "eslint --fix ./src{,**}/*.{js,jsx}",
-    "go": "node ./src/index.js"
+    "once": "node ./src/index.js --inspect",
+    "standby": "nodemon ./src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
