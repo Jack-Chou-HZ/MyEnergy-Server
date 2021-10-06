@@ -14,4 +14,3 @@ release
 dist
 build
 *.log
-.yarn/
