@@ -30,8 +30,6 @@ db.serialize(() => {
   })
 })
 
-
-
 db.close((err) => {
   if (err) {
     console.error(err.message)
