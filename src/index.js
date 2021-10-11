@@ -20,13 +20,17 @@ server.get('/defaultquestions', (req, res) => {
         if (err) { return console.error(err.message) }
         const sql = 'select * from questions'
         db.all(sql, {}, (err, rows) => {
+          if (err) {
+            throw new Error('sql error')
+          }
           // process rows here
+          console.log(rows)
           questions = rows
-        })
-        console.log(questions)
-        res.write(JSON.stringify(questions))
-        db.close()
-        res.end()
+          console.log(questions)
+          res.write(JSON.stringify(questions))
+          db.close()
+          res.end()
+        })        
       }
     )
   } else {
