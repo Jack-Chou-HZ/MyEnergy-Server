@@ -22,11 +22,11 @@ server.get('/defaultquestions', (req, res) => {
         db.all(sql, {}, (err, rows) => {
           // process rows here
           questions = rows
-        })
-        console.log(questions)
+          console.log(questions)
         res.write(JSON.stringify(questions))
         db.close()
         res.end()
+        })
       }
     )
   } else {
