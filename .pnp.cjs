@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["body-parser", "npm:1.19.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-standard", "virtual:accb8484066348104a3646829387115ffd43579ad724856a6cb042f7c6019732f734c172c7bd68a4e68ce4df7c5d8b997743dae1ac991a6ad25653a6b5aca2f9#npm:16.0.3"],
             ["eslint-plugin-export", "npm:0.1.2"],
@@ -4386,6 +4387,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["sqlite", "workspace:."],
+            ["body-parser", "npm:1.19.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-standard", "virtual:accb8484066348104a3646829387115ffd43579ad724856a6cb042f7c6019732f734c172c7bd68a4e68ce4df7c5d8b997743dae1ac991a6ad25653a6b5aca2f9#npm:16.0.3"],
             ["eslint-plugin-export", "npm:0.1.2"],

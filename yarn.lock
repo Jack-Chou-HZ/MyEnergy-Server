@@ -436,7 +436,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"body-parser@npm:1.19.0":
+"body-parser@npm:1.19.0, body-parser@npm:^1.19.0":
   version: 1.19.0
   resolution: "body-parser@npm:1.19.0"
   dependencies:
@@ -3794,6 +3794,7 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "sqlite@workspace:."
   dependencies:
+    body-parser: ^1.19.0
     eslint: ^7.32.0
     eslint-config-standard: ^16.0.3
     eslint-plugin-export: ^0.1.2

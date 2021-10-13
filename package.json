@@ -1,7 +1,7 @@
 {
   "name": "sqlite",
   "packageManager": "yarn@3.0.2",
-    "scripts": {
+  "scripts": {
     "lint": "eslint --fix ./src{,**}/*.js",
     "once": "node ./src/index.js --inspect",
     "standby": "nodemon ./src/index.js"
@@ -17,6 +17,7 @@
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
+    "body-parser": "^1.19.0",
     "nodemon": "^2.0.13"
   }
 }
