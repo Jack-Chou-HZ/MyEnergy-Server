@@ -11,6 +11,7 @@ const App = require('express')
 const bodyParser = require('body-parser')
 const server = new App()
 const sqlite3 = require('sqlite3').verbose()
+const PORT = 3000
 
 server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({ extended: true }))
@@ -62,7 +63,7 @@ server.get('/defaultquestions', (req, res) => {
       }
     )
   } else {
-    res.writeHead(404, { 'Content-Type': 'application/json' })
+    res.writeHead(404, { 'Content-Type': 'application/json'})
     res.write(JSON.stringify({ Error: '/defaultquestions not found!' }))
     res.end()
   }
@@ -100,4 +101,6 @@ server.post('/saveprofile', (req, res) => {
   }
 })
 
-server.listen(3000)
+server.listen(PORT, function () {
+  console.log(`express is listening on port: ${PORT}`)
+})
